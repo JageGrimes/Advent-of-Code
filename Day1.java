@@ -6,7 +6,7 @@ public class Day1
 {
 
     public static int count0_1 = 0;
-    public static void main(String[] args) throws IOException
+    public static void run() throws IOException
     {
         Scanner chop;
         try
