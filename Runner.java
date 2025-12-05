@@ -1,5 +1,4 @@
 import java.io.IOException;
-import java.util.regex.*;
 
 public class Runner 
 {
@@ -13,22 +12,8 @@ public class Runner
             //Day2.run();
             //Day3.run();
             //Day4.run();
-            Day5.run();
+            //Day5.run();
         }
-        catch(Error e)
-        {
-
-        }
-    }
-
-    public static void test()
-    {
-        String temp = "123";
-        int amount = 3;
-
-        String regex = "(" + temp + "){" + amount + "}"; 
-
-        String ID = "123123123";
-        System.out.println(Pattern.matches(regex, ID));
+        catch(Error e) {}
     }
 }

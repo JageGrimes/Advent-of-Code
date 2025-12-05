@@ -12,7 +12,7 @@ public class Day4
             
             Scanner chop = new Scanner(txt);
             
-            partOne(chop);
+            //partOne(chop);
             //partTwo(chop);
             
             chop.close();

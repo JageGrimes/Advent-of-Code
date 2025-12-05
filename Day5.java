@@ -17,7 +17,7 @@ public class Day5
 
             Scanner chopper = new Scanner(new File("DaysFiles/DayFiveTwo.txt"));
 
-            partTwo(chopper);
+            //partTwo(chopper);
             
             chop.close();
             chopper.close();
