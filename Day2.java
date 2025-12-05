@@ -96,7 +96,5 @@ public class Day2
             }
         }
         System.out.println(invalidNums);
-        //18724308646 big text
-        //3349553331 small text
     }
 }
