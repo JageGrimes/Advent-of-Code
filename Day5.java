@@ -99,34 +99,29 @@ public class Day5
         }
         
         System.out.println(count);
-        
-        
-        
     }
     
-    public static ArrayList<long[]> mergeOverlap(long[][] arr) 
+    public static ArrayList<long[]> mergeOverlap(long[][] ranges) 
     {
-
         // Sort intervals based on start values
-        Arrays.sort(arr, (a, b) -> Long.compare(a[0], b[0]));
+        Arrays.sort(ranges, (a, b) -> Long.compare(a[0], b[0]));
 
         ArrayList<long[]> res = new ArrayList<>();
-        res.add(new long[]{arr[0][0], arr[0][1]});
+        res.add(new long[]{ranges[0][0], ranges[0][1]});
 
-        for (int i = 1; i < arr.length; i++) 
+        for (int i = 1; i < ranges.length; i++) 
         {
-            long[] last = res.get(res.size() - 1);
-            long[] curr = arr[i];
+            long[] old = res.get(res.size() - 1);
+            long[] current = ranges[i];
 
-            // If current interval overlaps with the last merged interval,
-            // merge them
-            if (curr[0] <= last[1])
+            // If current interval overlaps with the last merged interval = merge
+            if (current[0] <= old[1])
             {
-                last[1] = Math.max(last[1], curr[1]);
+                old[1] = Math.max(old[1], current[1]);
             }
             else
             {
-                res.add(new long[]{curr[0], curr[1]});
+                res.add(new long[]{current[0], current[1]});
             }
         }
 
