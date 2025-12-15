@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Runner 
 {
@@ -18,8 +19,8 @@ public class Runner
             //Day7.run();
             //Day8.run();
             //Day9.run();
-            //Day10.run();
-            Day11.run();
+            Day10.run();
+            //Day11.run();
         }
         catch(Error e) {}
 

@@ -9,7 +9,7 @@ public class Day11
     {
         try
         {
-            File txt = new File("DaysFiles/DayEleven.txt");
+            File txt = new File("DayEleven.txt");
             
             Scanner chop = new Scanner(txt);
             
@@ -110,6 +110,14 @@ public class Day11
         int sum = 0;
         for(String str : out)
         {
+            if(str.equals("out"))
+            {
+                if(dac && fft)
+                {
+                    return 1 + sum;
+                }
+                return sum;
+            }
             if(str.equals("dac"))
             {
                 dac = true;
@@ -117,8 +125,6 @@ public class Day11
             {
                 fft = true;
             }
-
-            System.out.println(str);
             
             sum += recPartTwo(inOut, inOut.get(str), str, dac, fft);
         }
